@@ -8,29 +8,40 @@ body{
 
 .textPlace{
   font-family: cursive;
-  background-color: #f0f8ff63;
+  background-color: #f0f8ff;
   box-shadow: #0d0c0a 0px 22px 70px 4px;
+  border-radius: 10px;
+  border-style: solid;
+
 }
 
 .h1textPlace{
-  font-size: 287%;
+  font-size: 2em;
   font-style: italic;
   font-family: cursive;
-  box-shadow: #0d0c0a 0px 22px 70px 4px;
-  padding: 2%;
+  background-color: #f0f8ffbd;
+  box-shadow: 0 22px 70px 4px #0d0c0a;  
+  border-radius: 10px;
+  padding: 1%;
+  border-style: solid;
   color: #c19158;
-  background-color: #f0f8ff63;
+  background-color: #f0f8ffc9;
 }
 
-.TextLogo{
+.textLogoAll{
   display: inline-flex;
   padding: 3%;
 }
 
+.nossaMissaotxt{
+  text-align: justify;
+  padding: 20px;
+  margin-bottom: 33px;
+}
+
 .h2nossaMissao{
   text-align: left;
-  font-size: 250%;
-  color: #000;
+  font-size: 1em;
   padding-top: 5%;
   margin: 2%;
   color: white;
@@ -54,8 +65,7 @@ body{
   text-align: center;
   font-size: 260%;
   border-radius: 40px;
-  background-color: #d9ad5985;
-  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 3px 7px 11px 15px rgb(193 145 88 / 68%);
+  background-color: #d9ad59f5;
   font-family: cursive;
  
 }
@@ -74,6 +84,7 @@ body{
 
 .carousel-main{
   min-height: 40vw;
+  margin-top: 23px;
 
 }
 
@@ -175,15 +186,15 @@ body{
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     padding: 20px 0;
+    border-style: solid;
+    border-radius: 10px;
   }
 
   .band {
     width: 90%;
     max-width: 1240px;
     margin: 0 auto;
-    
-    display: inline-flex;
-    
+    display: inline-grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: 20px;
@@ -211,7 +222,6 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    
     position: relative;
     top: 0;
     transition: all .1s ease-in;
@@ -235,12 +245,14 @@ body{
     .h1Card {
       font-size: 20px;
       margin: 0;
-      color: #333
+      color: #333;
+      font-family: inherit;
     }
 
     .pCard{
       flex: 1;
       line-height: 1.4;
+      font-family: inherit;
     }
 
     .thumb {
@@ -248,6 +260,12 @@ body{
       background-size: cover;
       position: center center;
       
+    }
+
+    .textCursos{
+      color: #000;
+      font-family: cursive;
+      padding-bottom: 20px;
     }
 
 

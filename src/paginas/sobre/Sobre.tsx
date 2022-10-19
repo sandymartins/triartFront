@@ -22,14 +22,10 @@ function Sobre() {
     <img src="https://i.imgur.com/UDBIW93.png" alt="Tribo Artesão" />
   </div>
 
-<div className='TextLogo'>
-
-
-
-  <h2 className='h2nossaMissao'>NOSSA MISSÃO:</h2>
-
+<div className='textLogoAll'>
   <div className='textlogo'>
-  <h6>
+  <h2 className='h2nossaMissao'>NOSSA MISSÃO</h2>
+  <h6 className='nossaMissaotxt'>
     O E-commerce Tri Art é uma organização sem fins lucrativos
     para o desenvolvimento cultural e artístico.
 
@@ -47,8 +43,7 @@ function Sobre() {
   </div>
   </div>
   <div className='textPlace'>
-  <h2 className='h2titleCarousel'>Conheça os espaços de arte gratuitos</h2>
-  <h4 className='h6textPlace'>Acesse as informações de galerias de arte contemporânea, museus e fundações de arte</h4>
+  <h2 className='h2titleCarousel'>Conheça os espaços culturais de SP</h2>
   </div>
 
 
@@ -72,13 +67,15 @@ function Sobre() {
 {/* ADICIONANDO CARDS DE CURSOS */}
 
 <section className='cardCursos'>
+  <h2 className='textCursos'>Cursos para a comunidade</h2>
 <div className="band">
 <div className="item-2">
           <a href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045" className="card">
             <div className="thumb" style={{backgroundImage: `url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png")` }}></div>
             <article className='articleCard'>
-              <h1 className='h1Card'>How to Conduct Remote Usability Testing</h1>
-              <span>Harry Brignull</span>
+              <h1 className='h1Card'>CURSO ONLINE VENEZA</h1>
+              <p className='h1Card'>Decifrando Veneza por meio de sua história, sua arte e sua arquitetura</p>
+              <span></span>
             </article>
           </a>
     </div>

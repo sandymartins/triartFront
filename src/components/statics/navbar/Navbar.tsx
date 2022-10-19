@@ -113,7 +113,7 @@ function Navbar() {
 
   return (
     <AppBar position="sticky">
-      <Box style={{backgroundColor:'#c19258f2', padding: '.25rem 1.725rem'}} >
+      <Box style={{backgroundColor:'#c19158', padding: '.25rem 1.725rem'}} >
         <Toolbar disableGutters>
           <Typography 
             variant="h6"
@@ -189,7 +189,7 @@ function Navbar() {
               width="40%"
             />
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box className='nav' sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page.title}
