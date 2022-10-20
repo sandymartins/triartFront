@@ -12,7 +12,7 @@ import IconButton from '@mui/material/IconButton';
 import { login } from "../../services/Service";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import { addToken } from "../../store/tokens/Actions";
+import { addId, addToken } from "../../store/tokens/Actions";
 import UserLogin from "../../models/UserLogin";
 import './Login.css'
 
@@ -25,60 +25,81 @@ interface State {
 
 function Login() {
 
-    let navigate = useNavigate()
-    const dispatch = useDispatch()
-    const [token, setToken] = useState('')
-    const [userLogin, setUserLogin] = useState<UserLogin>({
-      id: 0,
-      nome: '',
-      usuario: '',
-      senha: '',
-      foto: '',
-      token: ''
-    });
-  
-    function updateModel(event: ChangeEvent<HTMLInputElement>){
-      setUserLogin({
-        ...userLogin,
-        [event.target.name]: event.target.value
-      })
+  let navigate = useNavigate()
+  const dispatch = useDispatch()
+  const [token, setToken] = useState('')
+
+
+
+  const [userLogin, setUserLogin] = useState<UserLogin>({
+    id: 0,
+    nome: '',
+    usuario: '',
+    senha: '',
+    foto: '',
+    token: '',
+  });
+
+  const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+    id: 0,
+    nome: '',
+    usuario: '',
+    senha: '',
+    foto: '',
+    token: '',
+  });
+
+  function updateModel(event: ChangeEvent<HTMLInputElement>) {
+    setUserLogin({
+      ...userLogin,
+      [event.target.name]: event.target.value
+    })
+  }
+
+  async function conectar(event: ChangeEvent<HTMLFormElement>) {
+    event.preventDefault();
+    try {
+      await login('usuarios/logar', userLogin, setRespUserLogin);
+
+      toast.success('Usuário Logado com Sucesso!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
+    } catch (error) {
+      toast.error('Erro ao Logar!!! Verifique os dados e tente novamente.', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
     }
-  
-    async function conectar(event: ChangeEvent<HTMLFormElement>){
-      event.preventDefault();
-      try{
-        await login('usuarios/logar', userLogin, setToken)
-  
-        toast.success('Usuário logado com sucesso!!!', {
-          position: 'top-right',
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: false,
-          theme: 'colored',
-          progress: undefined,
-        });
-      }catch(error){
-        toast.error('Erro ao Logar!!! Verifique os dados e tente novamente.', {
-          position: 'top-right',
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: false,
-          theme: 'colored',
-          progress: undefined,
-        });
-      }
+  }
+
+
+  useEffect(() => {
+    if(respUserLogin.token !==''){
+      dispatch(addToken(respUserLogin.token))
+      dispatch(addId(respUserLogin.id.toString()))
+      navigate('/home');
     }
-  
-    useEffect(() => {
-      if(token !== ''){
-        dispatch(addToken(token))
-        navigate('/home')
-      }
-    }, [token])
+  }, [respUserLogin])
+
+  useEffect(() => {
+    if (token !== '') {
+      dispatch(addToken(token))
+      navigate('/home');
+    }
+  }, [token]);
 
     const [values, setValues] = React.useState<State>({
         password: '',
@@ -143,7 +164,7 @@ function Login() {
         </FormControl>
                 <Box marginTop={2}>
                 <Button  variant="outlined" className='btn' type="submit">
-                  Cadastrar
+                  Login
                 </Button>
                 </Box>
             </form>
