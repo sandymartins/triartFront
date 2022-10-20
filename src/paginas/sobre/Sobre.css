@@ -83,8 +83,9 @@ body{
 }
 
 .carousel-main{
-  min-height: 40vw;
-  margin-top: 23px;
+
+  margin-top: 85px;
+  height: 400px;
 
 }
 
@@ -93,6 +94,7 @@ body{
 }
 
 .container {
+   height: 100px;
     position: relative;
     width: 320px;
     margin: 5px auto 0 auto;
@@ -182,12 +184,13 @@ body{
 
 
   .cardCursos{
-    background: #f5f7f8;
+    background: #c19158;
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     padding: 20px 0;
     border-style: solid;
     border-radius: 10px;
+    border-color: #c19158;
   }
 
   .band {
@@ -233,8 +236,6 @@ body{
 
   .articleCard {
     padding: 20px;
-    flex: 1;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;

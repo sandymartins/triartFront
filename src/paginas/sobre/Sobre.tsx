@@ -43,7 +43,7 @@ function Sobre() {
   </div>
   </div>
   <div className='textPlace'>
-  <h2 className='h2titleCarousel'>Conheça os espaços culturais de SP</h2>
+  <h2 className='h2titleCarousel'>Conheça os espaços culturais com entrada franca em SP</h2>
   </div>
 
 
@@ -66,45 +66,44 @@ function Sobre() {
 
 {/* ADICIONANDO CARDS DE CURSOS */}
 
+
+{/* arrumar os links que levam aos cursos*/}
 <section className='cardCursos'>
   <h2 className='textCursos'>Cursos para a comunidade</h2>
 <div className="band">
 <div className="item-2">
-          <a href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045" className="card">
-            <div className="thumb" style={{backgroundImage: `url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png")` }}></div>
+          <a href="https://www.ginead.com.br/curso/curso-estudo-de-cor-e-tipografia" className="card">
+            <div className="thumb" style={{backgroundImage: `url("https://i.imgur.com/7SHHmmD.jpg")` }}></div>
             <article className='articleCard'>
-              <h1 className='h1Card'>CURSO ONLINE VENEZA</h1>
-              <p className='h1Card'>Decifrando Veneza por meio de sua história, sua arte e sua arquitetura</p>
-              <span></span>
+              <h1 className='h1Card'>ESTUDO DE COR E TIPOGRAFIA</h1>
+              <p className='h1Card'>O ciclo de aulas 'Os mestres da cor', aulas on-line expositivas, vai abordar a vida e a obra dos 4 mestres da cor.</p>
             </article>
           </a>
     </div>
     <div className="item-3">
-      <a href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724" className="card">
-        <div className="thumb" style={{backgroundImage: `url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png")` }}></div>
+      <a href="https://www.feevale.br/cursos-e-eventos/mulheres-fotografas-um-panorama-fotografico-dos-cinco-continentes" className="card">
+        <div className="thumb" style={{backgroundImage: `url("https://i.imgur.com/xczwTYE.jpg")` }}></div>
         <article className='articleCard'>
-          <h1 className='h1Card'>Created by You, July Edition</h1>
-          <p className='h1Card'>Welcome to our monthly feature of fantastic tutorial results created by you, the Envato Tuts+ community! </p>
-          <span>Melody Nieves</span>
+          <h1 className='h1Card'>MULHERES NA FOTOGRAFIA</h1>
+          <p className='h1Card'>As mulheres entraram na história da arte como arquétipos para artistas. Aprendizagem das práticas e processos artísticos.</p>
         </article>
       </a>
     </div>
     <div className="item-4">
-          <a href="https://webdesign.tutsplus.com/tutorials/how-to-code-a-scrolling-alien-lander-website--cms-26826" className="card">
-            <div className="thumb" style={{backgroundImage: `url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png")` }}></div>
+          <a href="https://www.finuni.art/veneza360" className="card">
+            <div className="thumb" style={{backgroundImage: `url("https://i.imgur.com/rjhMRqw.jpg")` }}></div>
             <article className='articleCard'>
-              <h1 className='h1Card'>How to Code a Scrolling “Alien Lander” Website</h1>
-              <p className='pCard'>Well be putting things together so that as you scroll down from the top of the page youll see an “Alien Lander” making its way to touch down.</p>
-              <span>Kezz Bracey</span>
+              <h1 className='h1Card'>CURSO ONLINE VENEZA</h1>
+              <p className='h1Card'>Decifrando Veneza por meio de sua história, sua arte e sua arquitetura</p>
             </article>
           </a>
     </div>
     <div className="item-5">
-          <a href="https://design.tutsplus.com/tutorials/stranger-things-inspired-text-effect--cms-27139" className="card">
-            <div className="thumb" style={{backgroundImage: `url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png")` }}></div>
+          <a href="https://www.cursou.com.br/geral/harmonia-de-cores/" className="card">
+            <div className="thumb" style={{backgroundImage: `url("https://i.imgur.com/zVd5ytG.jpg")` }}></div>
             <article className='articleCard'>
-              <h1 className='h1Card'>How to Create a “Stranger Things” Text Effect in Adobe Photoshop</h1>
-              <span>Rose</span>
+              <h1 className='h1Card'>ESTUDOS CROMÁTICOS DE JOHANNES ITTEN</h1>
+              <p className='h1Card'>Curso baseado na metodologia de Johannes Itten de percepção visual através dos contrastes cromáticos.</p>
             </article>
           </a>
     </div>
