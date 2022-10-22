@@ -10,6 +10,7 @@ h1{
   text-align: center;
 }
 
+
 .mainHome{
   display: grid;
 }
@@ -19,7 +20,7 @@ h1{
   z-index: 1;
   top: 40%;
   left: 63%;
-  width: 28%;
+  width: 22%;
 }
 
 .bgLogo:hover
@@ -36,7 +37,7 @@ h1{
   top: 53%;
   left: 10%;
   font-size: 150%;
-  text-shadow: 1px 3px 7px rgb(193 145 88);
+  text-shadow: 1px 3px 7px #c19158;
   font-family: cursive;
 }
 
@@ -90,13 +91,14 @@ h1{
 
 }
 
+.carousel-fundo{
+  background-color: #ffffff;
 
-.bg-carousel{
-  background-color: #c19158;
-  margin-top: -1rem;
+  
 }
 
 .carousel-wrapper {
+  box-shadow: 0 15px 30px 1px grey;
   width: 520px;
   height: 350px;
   display: flex;
@@ -104,7 +106,7 @@ h1{
   align-items: center;
   box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
   border-radius: 20px;
-  margin: 100px auto 20px;
+  margin: 15px auto 20px;
 }
 
 .carousel-container {
@@ -198,3 +200,193 @@ h1{
     }
   }
 }
+
+
+
+
+
+
+
+
+/* CARD ODS  */
+
+.bg-cardHome {
+  background-color: rgb(255, 255, 255);
+    background-attachment: fixed;	
+    background-size: cover;
+    
+    }
+  
+  #container-home{
+    box-shadow: 0 15px 30px 1px grey;
+    background-color: rgb(193 146 88 / 83%);
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 5em auto;
+    height: 350px;
+    width: 700px;     
+  }
+    
+  .product-details {
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    padding: 30px;
+    height: 100%;
+    float: left;
+    width: 40%;
+  
+  }
+  
+  #container-home .product-details h1{
+    font-family: 'Bebas Neue', cursive;
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    color: #344055;
+    margin: 0;
+    
+  }
+  
+  #container-home .product-details h1:before{
+    position: absolute;
+    content: '';
+    right: 0%; 
+    top: 0%;
+    transform: translate(25px, -15px);
+    font-family: 'Bree Serif', serif;
+    display: inline-block;
+    background: #ffe6e6;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px;
+    color: white;
+    margin: 0;
+    animation: chan-sh 6s ease infinite;
+  
+  }
+  
+  .hint-star {
+    display: inline-block;
+    margin-left: 0.5em;
+    color: gold;
+    width: 50%;
+  }
+  
+  
+  #container-home .product-details > p {
+    font-family: cursive;
+    text-align: center;
+    font-size: 18px;
+    color: #f0f8ff;
+    
+    
+  }
+  .control{
+    position: absolute;
+    bottom: 20%;
+    left: 22.8%;
+    
+  }
+
+  .description{
+    font-family: cursive;
+    font-size: 15px;
+    text-align: center;
+}
+
+  .btn-Home {
+  
+    transform: translateY(0px);
+    transition: 0.3s linear;
+    background:  #c19158;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #eee;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .btn-Home:hover{transform: translateY(-6px);
+    background: #c4955ba1;}
+  
+  .btn-Home span {
+    font-family: 'Farsan', cursive;
+    transition: transform 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin:0;
+    
+  }
+  .btn-Home .price, .shopping-cart{
+    background: #333;
+    border: 0;
+    margin: 0;
+  }
+  
+  .btn-Home .price {
+    transform: translateX(-10%); padding-right: 15px;
+  }
+  
+  .btn-Home .shopping-cart {
+    transform: translateX(-100%);
+    position: absolute;
+    background: #c4955ba1;
+    z-index: 1;
+    left: 0;
+    top: 0;
+  }
+  
+  .btn-Home .buy {z-index: 3; font-weight: bolder;}
+  
+  .btn-Home:hover .price {transform: translateX(-110%);}
+  
+  .btn-Home:hover .shopping-cart {transform: translateX(0%);}
+  
+  
+  
+  .product-image {
+    transition: all 0.3s ease-out;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
+    width: 45%;
+    display: inline-block;
+  }
+  
+  #container-home img {width: 100%;height: 100%;}
+  
+  .info {
+      background: rgba(27, 26, 26, 0.9);
+      font-family: cursive;
+      transition: all 0.3s ease-out;
+      transform: translateX(-100%);
+      position: absolute;
+      line-height: 1.8;
+      text-align: left;
+      font-size: 105%;
+      cursor: no-drop;
+      color: #FFF;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+  }
+  
+  .info h2 {text-align: center}
+  .product-image:hover .info{transform: translateX(0);}
+  
+  .info ul li{transition: 0.3s ease;}
+  .info ul li:hover{transform: translateX(50px) scale(1.3);}
+  
+  .product-image:hover img {transition: all 0.3s ease-out;}
+  .product-image:hover img {transform: scale(1.2, 1.2);}

@@ -52,9 +52,9 @@
 
 .css-i4bv87-MuiSvgIcon-root{
    color: white;
-} */
+} /
 
-/* .label {
+/ .label {
     color: white !important;
 } */
 
@@ -83,10 +83,10 @@
     background-color: #e0e0e0;
     border-color: white;
     border-style: solid;
-    
+
 }
 
-@media (max-width: 1250px)
+@media (max-width: 800px)
 {
   .imagemLogo
    {

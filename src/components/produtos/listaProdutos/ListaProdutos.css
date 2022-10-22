@@ -7,6 +7,21 @@
     width: 100%;
     justify-content: center;
   }
+
+.MuiButton-label{
+  background-color: #c19158;
+
+}
+
+.MuiButton-containedSecondary{
+  background-color: transparent !important;
+  border-style: none;
+  border-radius: 10px;
+}
+
+.MuiButton-containedPrimary {
+  background-color: transparent !important;
+}
   
   .titleDescription {
     display: -webkit-box;

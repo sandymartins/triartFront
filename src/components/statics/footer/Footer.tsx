@@ -37,9 +37,6 @@ function Footer() {
               align="center"
               gutterBottom
               className="textos"
-              
-              
-            
             >
               SIGA-NOS NAS REDES SOCIAIS!{" "}
             </Typography>
