@@ -108,7 +108,7 @@ return (
               <Box display="flex" justifyContent="center" mb={1.5}>
                   <Link
                     to={`/atualizarProduto/${produtos.id}`}
-                    className="text-decoration-none"
+                    className="tdn"
                   >
                     <Box mx={1}>
                       <Button variant="contained" size="small" color="primary">
@@ -118,7 +118,7 @@ return (
                   </Link>
                   <Link
                     to={`/deletarProduto/${produtos.id}`}
-                    className="text-decoration-none"
+                    className="tdn"
                   >
                     <Box mx={1}>
                       <Button

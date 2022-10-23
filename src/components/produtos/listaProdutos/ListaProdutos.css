@@ -52,6 +52,10 @@
   margin-bottom: 25px;
 }
 
+.tdn {
+  text-decoration: none;
+}
+
   @media screen and (max-width: 850px){
     .container-card {
       width: 30%;
