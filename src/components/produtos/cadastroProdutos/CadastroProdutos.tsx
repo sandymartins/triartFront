@@ -156,9 +156,10 @@ function back() {
 }
 
   return (
-    <Container maxWidth="sm">
-      <form onSubmit={onSubmit}>
-          <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro de Produtos</Typography>
+    <main className='bgCadastroProduto'>
+    <Container maxWidth="sm" className='container-form'>
+      <form onSubmit={onSubmit} className='formLetter'>
+          <Typography variant="h3" color="textSecondary" component="h1" align="center">Formulário de cadastro de Produtos</Typography>
           <TextField value={produtos.nome} onChange={(event: ChangeEvent<HTMLInputElement>) => updatedProduto(event)} id="nome" label="nome" variant="outlined" name="nome" margin="normal" fullWidth />
           <TextField value={produtos.descricao} onChange={(event: ChangeEvent<HTMLInputElement>) => updatedProduto(event)} id="descricao" label="descrição" name="descricao" variant="outlined" margin="normal" fullWidth />
           <TextField value={produtos.foto} onChange={(event: ChangeEvent<HTMLInputElement>) => updatedProduto(event)} id="foto" label="foto" name="foto" variant="outlined" margin="normal" fullWidth />
@@ -167,7 +168,7 @@ function back() {
          
 
           <FormControl >
-              <InputLabel id="demo-simple-select-helper-label">Categoria </InputLabel>
+              <InputLabel id="demo-simple-select-helper-label">Categoria</InputLabel>
               <Select
                   labelId="demo-simple-select-helper-label"
                   id="demo-simple-select-helper"
@@ -189,6 +190,7 @@ function back() {
           </FormControl>
       </form>
   </Container>
+  </main>
 )
 }
 

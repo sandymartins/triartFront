@@ -144,6 +144,16 @@ function Cadastrar() {
                 fullWidth
                 margin="normal"
               />
+                <TextField 
+                onChange={(event: ChangeEvent<HTMLInputElement>) => updateModel(event)}
+                value={userCadastrar.foto}
+                id="foto"
+                name="foto"
+                label="Foto"
+                variant="outlined"
+                fullWidth
+                margin="normal"
+              />
 
               <FormControl fullWidth margin='normal' variant="outlined">
                 <InputLabel htmlFor="outlined-adornment-password" className="escolha">Senha</InputLabel>

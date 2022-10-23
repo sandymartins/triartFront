@@ -7,6 +7,7 @@ import Produto from '../../../models/Produto';
 import { buscaId, deleteId, post } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/TokensReducer';
 import { toast } from 'react-toastify';
+import './DeletarProdutos.css';
 
 
  function DeletarProdutos() {
@@ -68,24 +69,24 @@ import { toast } from 'react-toastify';
       <Card variant="outlined" >
         <CardContent>
           <Box justifyContent="center">
-            <Typography color="textSecondary" gutterBottom>
+            <Typography gutterBottom className='delete-font'>
               Deseja deletar a Postagem:
             </Typography>
-            <Typography color="textSecondary" >
+            <Typography className='produto-font'>
             {produto?.nome}
             </Typography>
           </Box>
 
         </CardContent>
         <CardActions>
-          <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
+          <Box display="flex" justifyContent="start" ml={1.0} mb={2} className='confirm-Delete'>
             <Box mx={2}>
-            <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+            <Button onClick={sim} variant="contained" size='large' className='confirm-Delete'>
               Sim
             </Button>
             </Box>
             <Box>
-            <Button  onClick={nao} variant="contained" size='large' color="secondary">
+            <Button  onClick={nao} variant="contained" size='large' className='recuse-Delete'>
               Não
             </Button>
             </Box>

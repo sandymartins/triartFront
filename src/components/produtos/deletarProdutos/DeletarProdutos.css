@@ -1,0 +1,21 @@
+.delete-font{
+    font-family: cursive !important;
+    font-size: xxx-large !important;
+    color: #000 !important;
+    background-color: #c19158 !important;
+    border-radius: 50px !important;
+}
+
+.produto-font .MuiTypography-body1{
+    font-family: cursive !important;
+    font-size: x-large !important;
+}
+
+.confirm-Delete .MuiButton-label {
+    background-color: red !important;
+}
+
+
+.confirm-Delete .MuiButton-contained{
+    background-color: red !important; 
+}
