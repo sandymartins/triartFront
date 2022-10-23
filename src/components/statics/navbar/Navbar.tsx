@@ -118,7 +118,7 @@ function Navbar() {
           <Typography 
             variant="h6"
             noWrap
-            component="a"
+            component="a" className='size-a'
             href="/"
             sx={{
               mr: 2,
