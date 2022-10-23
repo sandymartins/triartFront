@@ -19,517 +19,588 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      maxWidth: 345,
-    },
-    media: {
-      height: 0,
-      paddingTop: '56.25%', // 16:9
-    },
-    expand: {
-      transform: 'rotate(0deg)',
-      marginLeft: 'auto',
-      transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
-    expandOpen: {
-      transform: 'rotate(180deg)',
-    },
-    avatar: {
-      backgroundColor: red[500],
-    },
-  }),
+  createStyles({
+    root: {
+      maxWidth: 345,
+    },
+    media: {
+      height: 0,
+      paddingTop: '56.25%', // 16:9
+    },
+    expand: {
+      transform: 'rotate(0deg)',
+      marginLeft: 'auto',
+      transition: theme.transitions.create('transform', {
+        duration: theme.transitions.duration.shortest,
+      }),
+    },
+    expandOpen: {
+      transform: 'rotate(180deg)',
+    },
+    avatar: {
+      backgroundColor: red[500],
+    },
+  }),
 );
 
 export default function Contato() {
-  const classes = useStyles();
-  const [brend, setBrenda] = React.useState(false);
-  const [flavi, setFlavio] = React.useState(false);
-  const [luc, setLucas] = React.useState(false);
-  const [leon, setLeo] = React.useState(false);
-  const [mate, setMateus] = React.useState(false);
-  const [mir, setMi] = React.useState(false);
-  const [sand, setSan] = React.useState(false);
+  const classes = useStyles();
+  const [brend, setBrenda] = React.useState(false);
+  const [flavi, setFlavio] = React.useState(false);
+  const [luc, setLucas] = React.useState(false);
+  const [leon, setLeo] = React.useState(false);
+  const [mate, setMateus] = React.useState(false);
+  const [mir, setMi] = React.useState(false);
+  const [sand, setSan] = React.useState(false);
 
+  const flavio = () => {
+    setFlavio(!flavi);
+  };
 
-  const flavio = () => {
-    setFlavio(!flavi);
-  };
+  const brenda = () => {
+    setBrenda(!brend);
+  }
 
-  const brenda = () => {
-    setBrenda(!brend);
-  }
+  const lucas = () => {
+    setLucas(!luc);
+  }
 
-  const lucas = () => {
-    setLucas(!luc);
-  }
+  const leo = () => {
+    setLeo(!leon);
+  }
 
-  const leo = () => {
-    setLeo(!leon);
-  }
+  const mi = () => {
+    setMi(!mir);
+  }
 
-  const mi = () => {
-    setMi(!mir);
-  }
+  const mat = () => {
+    setMateus(!mate);
+  }
 
-  const mat = () => {
-    setMateus(!mate);
-  }
+  const san = () => {
+    setSan(!sand);
+  }
 
-  const san = () => {
-    setSan(!sand);
-  }
+  return (
+    
+    <div className='bgContato'>
+      <div className='bgContato'> 
+      <Grid container direction='row' justifyContent='center'>
+        <Grid alignItems='center' justifyContent='center'>
 
-  return (
-    <>
-        <Grid container direction='row' justifyContent='center'>
-      <Grid alignItems='center' justifyContent='center'>
+          <Box component="span" m={5}>
 
-    <Box component="span" m={5} >
+            <Card className={classes.root}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="recipe" className={classes.avatar}>
+                    LP
+                  </Avatar>
+                }
 
- <Card className={classes.root}>
-      <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            B
-          </Avatar>
-        }
+                title="Lucas Pereira"
+                subheader="Desenvolvedor FullStack Java"
+              />
+              <CardMedia
+                className={classes.media}
+                image="https://avatars.githubusercontent.com/u/106689837?v=4"
+                title="Lucas"
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Saiba mais
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  <a href="https://www.linkedin.com/in/lucascostapereira/"
+                    target="_blank"
+                    color='blue'>
+                    <LinkedInIcon className='color' />
+                  </a>
+                </IconButton>
 
-        title="Brenda Chagas"
-        subheader="Desenvolvedora FullStack Java"
-      />
-      <CardMedia
-        className={classes.media}
-        image="/static/images/cards/paella.jpg"
-        title="Brenda"
-      />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          Apresentação Breve
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <LinkedInIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <GitHubIcon />
-        </IconButton>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: brend,
-          })}
-          onClick={brenda}
-          aria-expanded={brend}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
-      <Collapse in={brend} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-         Apresentação expandida
-          </Typography>
-          <Typography paragraph>
-          Apresentação expandida
-          </Typography>
-          <Typography paragraph>
-          Apresentação expandida
-          </Typography>
-          <Typography>
-          Apresentação expandida
-          </Typography>
-        </CardContent>
-      </Collapse>
-    </Card>
-    </Box>
+                <IconButton aria-label="share">
+                  <a href="https://github.com/pereiracaslu/"
+                    target="_blank"
+                    color='blue'>
+                    <GitHubIcon className='color' />
+                  </a>
+                </IconButton>
+                <IconButton
+                  className={clsx(classes.expand, {
+                    [classes.expandOpen]: luc,
+                  })}
+                  onClick={lucas}
+                  aria-expanded={luc}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+              <Collapse in={luc} timeout="auto" unmountOnExit>
+                <CardContent>
+                  <Typography paragraph> Hello word!</Typography>
+                  <Typography paragraph>
 
-    <Box component="span" m={5} >
+                  </Typography>
+                  <Typography paragraph>
+                    Tenho 24 anos, ex-militar.
+                  </Typography>
+                  <Typography paragraph>
+                    Apaixonado por adrenalina
+                  </Typography>
+                  <Typography>
 
-<Card className={classes.root}>
-     <CardHeader
-       avatar={
-         <Avatar aria-label="recipe" className={classes.avatar}>
-           MM
-         </Avatar>
-       }
+                  </Typography>
+                </CardContent>
+              </Collapse>
+            </Card>
+          </Box>
 
-       title="Mirelle Mota"
-       subheader="Desenvolvedora FullStack Java"
-     />
-     <CardMedia
-       className={classes.media}
-       image="/static/images/cards/paella.jpg"
-       title="Mirelle"
-     />
-     <CardContent>
-       <Typography variant="body2" color="textSecondary" component="p">
-       Apresentação
-       </Typography>
-     </CardContent>
-     <CardActions disableSpacing>
-       <IconButton aria-label="add to favorites">
-         <LinkedInIcon />
-       </IconButton>
-       <IconButton aria-label="share">
-         <GitHubIcon />
-       </IconButton>
-       <IconButton
-         className={clsx(classes.expand, {
-           [classes.expandOpen]: mir,
-         })}
-         onClick={mi}
-         aria-expanded={mir}
-         aria-label="show more"
-       >
-         <ExpandMoreIcon />
-       </IconButton>
-     </CardActions>
-     <Collapse in={mir} timeout="auto" unmountOnExit>
-       <CardContent>
-         <Typography paragraph>Method:</Typography>
-         <Typography paragraph>
-         Apresentação expandida
-         </Typography>
-         <Typography paragraph>
-         Apresentação expandida
-         </Typography>
-         <Typography paragraph>
-         Apresentação expandida
-         </Typography>
-         <Typography>
-         Apresentação expandida
-         </Typography>
-       </CardContent>
-     </Collapse>
-   </Card>
-   </Box>
+          <Box component="span" m={5} >
 
-   
+            <Card className={classes.root}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="recipe" className={classes.avatar}>
+                    MM
+                  </Avatar>
+                }
 
-    <Box component="span" m={5} >
+                title="Mirelle Mota"
+                subheader="Desenvolvedora FullStack Java"
+              />
+              <CardMedia
+                className={classes.media}
+                image="https://avatars.githubusercontent.com/u/104468548?v=4"
+                title="Mirelle"
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Apresentação
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  <a href="https://www.linkedin.com/in/mirelle-mota/"
+                    target="_blank">
+                    <LinkedInIcon className='color' />
+                  </a>
+                </IconButton>
 
-<Card className={classes.root}>
-     <CardHeader
-       avatar={
-         <Avatar aria-label="recipe" className={classes.avatar}>
-           S
-         </Avatar>
-       }
-
-       title="Sandy Martins"
-       subheader="Desenvolvedora FullStack Java"
-     />
-     <CardMedia
-       className={classes.media}
-       image="/static/images/cards/paella.jpg"
-       title="Sandy"
-     />
-     <CardContent>
-       <Typography variant="body2" color="textSecondary" component="p">
-       Apresentação
-       </Typography>
-     </CardContent>
-     <CardActions disableSpacing>
-       <IconButton aria-label="add to favorites">
-         < LinkedInIcon/>
-       </IconButton>
-       <IconButton aria-label="share">
-         <GitHubIcon />
-       </IconButton>
-       <IconButton
-         className={clsx(classes.expand, {
-           [classes.expandOpen]: sand,
-         })}
-         onClick={san}
-         aria-expanded={sand}
-         aria-label="show more"
-       >
-         <ExpandMoreIcon />
-       </IconButton>
-     </CardActions>
-     <Collapse in={sand} timeout="auto" unmountOnExit>
-       <CardContent>
-         <Typography paragraph>Method:</Typography>
-         <Typography paragraph>
-         Apresentação expandida
-         </Typography>
-         <Typography paragraph>
-         Apresentação expandida
-         </Typography>
-         <Typography paragraph>
-         Apresentação expandida
-         </Typography>
-         <Typography>
-         Apresentação expandida
-         </Typography>
-       </CardContent>
-     </Collapse>
-   </Card>
-   </Box>
-
-
-</Grid>
-</Grid>
-
-   <Grid container direction='row' justifyContent='center' alignItems='center'>
-      <Grid alignItems='center' xs={12} justifyContent='center'>
-
-      <Box component="span" m={5}>
-    <Card className={classes.root}>
-      <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            F
-          </Avatar>
-        }
-        title="Flavio Messias"
-        subheader="Desenvolvedor FullStack Java"
-      />
-      <CardMedia
-        className={classes.media}
-        image="/static/images/cards/paella.jpg"
-        title="Flavio"
-      />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-        Apresentação
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <LinkedInIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <GitHubIcon />
-        </IconButton>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: flavi,
-          })}
-          onClick={flavio}
-          aria-expanded={flavi}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
-      <Collapse in={flavi} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-          Apresentação expandida
-          </Typography>
-          <Typography paragraph>
-          Apresentação expandida
-          </Typography>
-          <Typography paragraph>
-          Apresentação expandida
-          </Typography>
-          <Typography>
-          Apresentação expandida
-          </Typography>
-        </CardContent>
-      </Collapse>
-    </Card>
-
-    </Box>
-
-   <Box component="span" m={5} >
-
-<Card className={classes.root}>
-     <CardHeader
-       avatar={
-         <Avatar aria-label="recipe" className={classes.avatar}>
-           L
-         </Avatar>
-       }
-
-       title="Leonardo Gonçalves"
-       subheader="Desenvolvedor FullStack Java"
-     />
-     <CardMedia
-       className={classes.media}
-       image="/static/images/cards/paella.jpg"
-       title="Leo"
-     />
-     <CardContent>
-       <Typography variant="body2" color="textSecondary" component="p">
-       Apresentação
-       </Typography>
-     </CardContent>
-     <CardActions disableSpacing>
-       <IconButton aria-label="add to favorites">
-         <LinkedInIcon />
-       </IconButton>
-       <IconButton aria-label="share">
-         <GitHubIcon />
-       </IconButton>
-       <IconButton
-         className={clsx(classes.expand, {
-           [classes.expandOpen]: leon,
-         })}
-         onClick={leo}
-         aria-expanded={leon}
-         aria-label="show more"
-       >
-         <ExpandMoreIcon />
-       </IconButton>
-     </CardActions>
-     <Collapse in={leon} timeout="auto" unmountOnExit>
-       <CardContent>
-         <Typography paragraph>Method:</Typography>
-         <Typography paragraph>
-         Apresentação expandida
-         </Typography>
-         <Typography paragraph>
-         Apresentação expandida
-         </Typography>
-         <Typography paragraph>
-         Apresentação expandida
-         </Typography>
-         <Typography>
-         Apresentação expandida
-         </Typography>
-       </CardContent>
-     </Collapse>
-   </Card>
-   </Box>
-
-   <Box component="span" m={5}>
-
-   <Card className={classes.root}>
-      <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            L
-          </Avatar>
-        }
-
-        title="Lucas Pereira"
-        subheader="Desenvolvedor FullStack Java"
-      />
-      <CardMedia
-        className={classes.media}
-        image="/static/images/cards/paella.jpg"
-        title="Lucas"
-      />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-        Apresentação
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <LinkedInIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <GitHubIcon />
-        </IconButton>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: luc,
-          })}
-          onClick={lucas}
-          aria-expanded={luc}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
-      <Collapse in={luc} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-          Apresentação expandida
-          </Typography>
-          <Typography paragraph>
-          Apresentação expandida
-          </Typography>
-          <Typography paragraph>
-          Apresentação expandida
-          </Typography>
-          <Typography>
-          Apresentação expandida
-          </Typography>
-        </CardContent>
-      </Collapse>
-    </Card>
-    </Box>
-
-    <Box component="span" m={5} >
-
-<Card className={classes.root}>
-     <CardHeader
-       avatar={
-         <Avatar aria-label="recipe" className={classes.avatar}>
-           MT
-         </Avatar>
-       }
-
-       title="Mateus de Queiroz"
-       subheader="Desenvolvedor FullStack Java"
-     />
-     <CardMedia
-       className={classes.media}
-       image="/static/images/cards/paella.jpg"
-       title="Mateus"
-     />
-     <CardContent>
-       <Typography variant="body2" color="textSecondary" component="p">
-       Apresentação
-       </Typography>
-     </CardContent>
-     <CardActions disableSpacing>
-       <IconButton aria-label="add to favorites">
-         <LinkedInIcon />
-       </IconButton>
-       <IconButton aria-label="share">
-         <GitHubIcon />
-       </IconButton>
-       <IconButton
-         className={clsx(classes.expand, {
-           [classes.expandOpen]: mate,
-         })}
-         onClick={mat}
-         aria-expanded={mate}
-         aria-label="show more"
-       >
-         <ExpandMoreIcon />
-       </IconButton>
-     </CardActions>
-     <Collapse in={mate} timeout="auto" unmountOnExit>
-       <CardContent>
-         <Typography paragraph>Method:</Typography>
-         <Typography paragraph>
-         Apresentação expandida
-         </Typography>
-         <Typography paragraph>
-         Apresentação expandida
-         </Typography>
-         <Typography paragraph>
-         Apresentação expandida
-         </Typography>
-         <Typography>
-          Apresentação expandida
-         </Typography>
-       </CardContent>
-     </Collapse>
-   </Card>
-   </Box>
-
-
-    
-    </Grid>
-    </Grid>
+                <IconButton aria-label="share">
+                  <a href="https://github.com/MirelleMota"
+                    target="_blank">
+                    <GitHubIcon className='color' />
+                  </a>
+                </IconButton>
+                <IconButton
+                  className={clsx(classes.expand, {
+                    [classes.expandOpen]: mir,
+                  })}
+                  onClick={mi}
+                  aria-expanded={mir}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+              <Collapse in={mir} timeout="auto" unmountOnExit>
+                <CardContent>
+                  <Typography paragraph>Method:</Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography>
+                    Apresentação expandida
+                  </Typography>
+                </CardContent>
+              </Collapse>
+            </Card>
+          </Box>
 
 
 
 
-    </>
-  );
+        </Grid>
+      </Grid>
+
+      <Grid container direction='row' justifyContent='center' alignItems='center'>
+        <Grid alignItems='center' xs={12} justifyContent='center'>
+
+          <Box component="span" m={5}>
+            <Card className={classes.root}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="recipe" className={classes.avatar}>
+                    FM
+                  </Avatar>
+                }
+                title="Flavio Messias"
+                subheader="Desenvolvedor FullStack Java"
+              />
+              <CardMedia
+                className={classes.media}
+                image="https://avatars.githubusercontent.com/u/105988892?v=4"
+                title="Flavio"
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Apresentação
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  <a href="https://www.linkedin.com/in/flaviohmneto/"
+                    target="_blank"
+                    color='blue'>
+                    <LinkedInIcon className='color' />
+                  </a>
+                </IconButton>
+
+                <IconButton aria-label="share">
+                  <a href="https://github.com/FlavioMessias/"
+                    target="_blank"
+                    color='blue'>
+                    <GitHubIcon className='color' />
+                  </a>
+                </IconButton>
+                <IconButton
+                  className={clsx(classes.expand, {
+                    [classes.expandOpen]: flavi,
+                  })}
+                  onClick={flavio}
+                  aria-expanded={flavi}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+              <Collapse in={flavi} timeout="auto" unmountOnExit>
+                <CardContent>
+                  <Typography paragraph>Method:</Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography>
+                    Apresentação expandida
+                  </Typography>
+                </CardContent>
+              </Collapse>
+            </Card>
+
+          </Box>
+
+          <Box component="span" m={5} >
+
+            <Card className={classes.root}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="recipe" className={classes.avatar}>
+                    SM
+                  </Avatar>
+                }
+
+                title="Sandy Martins"
+                subheader="Desenvolvedora FullStack Java"
+              />
+              <CardMedia
+                className={classes.media}
+                image="https://i.imgur.com/qkJRYSH.jpg"
+                title="Sandy"
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Apresentação
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  <a href="https://www.linkedin.com/in/sandymartinss/"
+                    target="_blank">
+                    <LinkedInIcon className='color' />
+                  </a>
+                </IconButton>
+
+                <IconButton aria-label="share">
+                  <a href="https://github.com/sandymartins/"
+                    target="_blank">
+                    <GitHubIcon className='color' />
+                  </a>
+                </IconButton>
+                <IconButton
+                  className={clsx(classes.expand, {
+                    [classes.expandOpen]: sand,
+                  })}
+                  onClick={san}
+                  aria-expanded={sand}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+              <Collapse in={sand} timeout="auto" unmountOnExit>
+                <CardContent>
+                  <Typography paragraph>Method:</Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography>
+                    Apresentação expandida
+                  </Typography>
+                </CardContent>
+              </Collapse>
+            </Card>
+          </Box>
+        </Grid>
+      </Grid>
+
+      <Grid container direction='row' justifyContent='center' alignItems='center'>
+        <Grid alignItems='center' xs={12} justifyContent='center'>
+
+          <Box component="span" m={5} >
+
+            <Card className={classes.root}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="recipe" className={classes.avatar}>
+                    BC
+                  </Avatar>
+                }
+
+                title="Brenda Chagas"
+                subheader="Desenvolvedora FullStack Java"
+              />
+              <CardMedia
+                className={classes.media}
+                image="https://avatars.githubusercontent.com/u/106995756?v=4"
+                title="Brenda"
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  <a href="https://www.linkedin.com/in/brenda-chagas-667aa3233/"
+                    target="_blank"
+                    color='blue'>
+                    <LinkedInIcon className='color' />
+                  </a>
+                </IconButton>
+
+                <IconButton aria-label="share">
+                  <a href="https://github.com/Brehchs/"
+                    target="_blank"
+                    color='blue'>
+                    <GitHubIcon className='color' />
+                  </a>
+                </IconButton>
+                <IconButton
+                  className={clsx(classes.expand, {
+                    [classes.expandOpen]: brend,
+                  })}
+                  onClick={brenda}
+                  aria-expanded={brend}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+              <Collapse in={brend} timeout="auto" unmountOnExit>
+                <CardContent>
+                  <Typography paragraph>Method:</Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography>
+                    Apresentação expandida
+                  </Typography>
+                </CardContent>
+              </Collapse>
+            </Card>
+          </Box>
+
+          <Box component="span" m={5} >
+
+            <Card className={classes.root}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="recipe" className={classes.avatar}>
+                    MQ
+                  </Avatar>
+                }
+
+                title="Mateus de Queiroz"
+                subheader="Desenvolvedor FullStack Java"
+              />
+              <CardMedia
+                className={classes.media}
+                image="https://avatars.githubusercontent.com/u/84162653?v=4"
+                title="Mateus"
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Apresentação
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  <a href="https://www.linkedin.com/in/mateus-queiroz-davidson96/"
+                    target="_blank"
+                    color='blue'>
+                    <LinkedInIcon className='color' />
+                  </a>
+                </IconButton>
+
+                <IconButton aria-label="share">
+                  <a href="https://github.com/MQueirozD/"
+                    target="_blank"
+                    color='blue'>
+                    <GitHubIcon className='color' />
+                  </a>
+                </IconButton>
+                <IconButton
+                  className={clsx(classes.expand, {
+                    [classes.expandOpen]: mate,
+                  })}
+                  onClick={mat}
+                  aria-expanded={mate}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+              <Collapse in={mate} timeout="auto" unmountOnExit>
+                <CardContent>
+                  <Typography paragraph>Method:</Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography>
+                    Apresentação expandida
+                  </Typography>
+                </CardContent>
+              </Collapse>
+            </Card>
+          </Box>
+
+        </Grid>
+      </Grid>
+
+      <Grid container direction='row' justifyContent='center' alignItems='center'>
+        <Grid alignItems='center' xs={12} justifyContent='center'>
+
+
+          <Box component="span" m={5} >
+
+            <Card className={classes.root}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="recipe" className={classes.avatar}>
+                    LG
+                  </Avatar>
+                }
+
+                title="Leonardo Gonçalves"
+                subheader="Desenvolvedor FullStack Java"
+              />
+              <CardMedia
+                className={classes.media}
+                image="https://avatars.githubusercontent.com/u/78987929?v=4"
+                title="Leo"
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Apresentação
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  <a href="https://www.linkedin.com/in/leonardo-gon%C3%A7alves-0020b2246/"
+                    target="_blank"
+                    color='blue'>
+                    <LinkedInIcon className='color' />
+                  </a>
+                </IconButton>
+
+                <IconButton aria-label="share">
+                  <a href="https://github.com/leogs2003/"
+                    target="_blank"
+                    color='blue'>
+                    <GitHubIcon className='color' />
+                  </a>
+                </IconButton>
+                <IconButton
+                  className={clsx(classes.expand, {
+                    [classes.expandOpen]: leon,
+                  })}
+                  onClick={leo}
+                  aria-expanded={leon}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+              <Collapse in={leon} timeout="auto" unmountOnExit>
+                <CardContent>
+                  <Typography paragraph>Method:</Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography paragraph>
+                    Apresentação expandida
+                  </Typography>
+                  <Typography>
+                    Apresentação expandida
+                  </Typography>
+                </CardContent>
+              </Collapse>
+            </Card>
+          </Box>
+
+
+        </Grid>
+      </Grid>
+
+          
+      </div>
+      </div>
+           
+    
+  );
 }

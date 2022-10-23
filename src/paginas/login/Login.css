@@ -2,6 +2,10 @@
     text-decoration: none;
 }
 
+.MuiGrid-justify-content-xs-center{
+    margin-top: 0% !important;
+}
+
 
 .imagemLogo {
     background-image: url(https://i.imgur.com/IV47v8s.png);
