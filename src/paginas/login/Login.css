@@ -86,6 +86,10 @@
 
 }
 
+.MuiButton-label {
+background: unset;
+}
+
 @media (max-width: 800px)
 {
   .imagemLogo

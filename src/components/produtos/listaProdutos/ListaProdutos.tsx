@@ -23,7 +23,8 @@ const useStyles = makeStyles({
 function ListaProdutos() {
 
     let navigate = useNavigate();
-    const [produtos, setProdutos] = useState<Produto[]>([])
+    const [produtos, setProdutos] = useState<any[]>([])
+
     const token = useSelector<TokenState, TokenState['tokens']>(
       (state)=> state.tokens
     ) 
@@ -103,25 +104,55 @@ return (
 
 
               
-            <Box display="flex" justifyContent="center" mt={1.5} mb={1.5}>
-
-              <Link to={`/atualizarProduto/${produtos.id}`} className="text-decorator-none" >
-                <Box mx={1}>
-                  <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                    atualizar
-                  </Button>
+           {produtos.usuario?.id === +userId ? (
+              <Box display="flex" justifyContent="center" mb={1.5}>
+                  <Link
+                    to={`/atualizarProduto/${produtos.id}`}
+                    className="text-decoration-none"
+                  >
+                    <Box mx={1}>
+                      <Button variant="contained" size="small" color="primary">
+                        atualizar
+                      </Button>
+                    </Box>
+                  </Link>
+                  <Link
+                    to={`/deletarProduto/${produtos.id}`}
+                    className="text-decoration-none"
+                  >
+                    <Box mx={1}>
+                      <Button
+                        variant="contained"
+                        size="small"
+                        color="secondary"
+                      >
+                        deletar
+                      </Button>
+                    </Box>
+                  </Link>
                 </Box>
-              </Link> 
-              
-              <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">
-                <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
-                    deletar
-                  </Button>
+            ) : (
+              <Box display="flex" justifyContent="center" mb={1.5}>
+                  
+                    <Box mx={1}>
+                      <Button variant="contained" size="small" color="primary" disabled>
+                        atualizar
+                      </Button>
+                    </Box>
+                  
+                    <Box mx={1}>
+                      <Button
+                        variant="contained"
+                        size="small"
+                        color="secondary"
+                        disabled
+                      >
+                        deletar
+                      </Button>
+                    </Box>
+                  
                 </Box>
-              </Link>
-             
-            </Box>
+            )}
 
           </CardActions>
         </Card>

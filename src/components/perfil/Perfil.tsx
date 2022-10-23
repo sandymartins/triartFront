@@ -1,11 +1,14 @@
-import { Avatar, Grid, Typography } from '@mui/material';
+import { makeStyles } from '@material-ui/core';
+import { Avatar, Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import User from '../../models/User';
-import { buscaId } from '../../services/Service';
+import { busca, buscaId } from '../../services/Service';
 import { TokenState } from '../../store/tokens/TokensReducer';
 import './Perfil.css'
+
 
 function Perfil() {
 
@@ -44,15 +47,15 @@ function Perfil() {
             <Typography variant='h5' align='center' >{usuario.nome}</Typography>
           </Grid>
           <Grid xs={9} justifyContent='center' className='perfil'>
-            <Typography variant='h4' align='center'>Produtos de {usuario.nome}</Typography>
-            Você tem um total de: {usuario.produtos?.length} produtos cadastrados
+            <Typography variant='h4' align='center'>Postagens de {usuario.nome}</Typography>
+            Você tem um total de {usuario.produtos?.length} postagens feitas
 
             <div className="postUser">
             {usuario.produtos?.map((produtos) => (
               <div className="postPerfil">
                 <h3>{produtos.nome}</h3>
                 <p>{produtos.descricao}</p>
-                <strong>{produtos.categoria?.tipo}</strong> 
+                <strong>{produtos.categoria?.tipo}</strong>
               </div>
             ))}
             </div>
