@@ -60,7 +60,8 @@ const classes = useStyles();
 
 
 return (
-  <div className="listaCards">
+
+  <main className="listaCards">
     {produtos.map((produtos) => (
       <Card key={produtos.id}>
           <CardActionArea>
@@ -76,7 +77,6 @@ return (
               </Typography>
               <Typography
                 variant="body2"
-                color="textSecondary"
                 component="p"
                 className="productDescription"
               >
@@ -98,11 +98,6 @@ return (
                 Ver mais
               </Button>
             </Link>
-          
-
-
-
-              
             <Box display="flex" justifyContent="center" mt={1.5} mb={1.5}>
 
               <Link to={`/atualizarProduto/${produtos.id}`} className="text-decorator-none" >
@@ -127,7 +122,7 @@ return (
         </Card>
       
     ))}
-  </div>
+  </main>
 );
 }
 
