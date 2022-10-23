@@ -70,7 +70,7 @@ import './DeletarProdutos.css';
         <CardContent>
           <Box justifyContent="center">
             <Typography gutterBottom className='delete-font'>
-              Deseja deletar a Postagem:
+              Deseja deletar a Produto:
             </Typography>
             <Typography className='produto-font'>
             {produto?.nome}
