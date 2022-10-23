@@ -139,7 +139,7 @@ function Cadastrar() {
                 value={userCadastrar.usuario}
                 id="usuario"
                 name="usuario"
-                label="Usuário"
+                label="Usuário (E-mail)"
                 variant="outlined"
                 fullWidth
                 margin="normal"
@@ -149,7 +149,7 @@ function Cadastrar() {
                 value={userCadastrar.foto}
                 id="foto"
                 name="foto"
-                label="Foto"
+                label="Foto (Url)"
                 variant="outlined"
                 fullWidth
                 margin="normal"

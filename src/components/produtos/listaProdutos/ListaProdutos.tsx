@@ -45,6 +45,11 @@ useEffect(() => {
 
 const classes = useStyles();
 
+const numberFormat = (value: any) =>
+new Intl.NumberFormat('pt-BR', {
+  style: 'currency',
+  currency: 'BRL'
+}).format(value);
 
 return (
 
@@ -70,7 +75,13 @@ return (
                 {produtos.descricao}
               </Typography>
               <Typography variant="body2" component="p">
-                {produtos.categoria?.tipo}
+               Quantidade: {produtos.quantidade}
+              </Typography>
+              <Typography variant="body2" component="p">
+                Preço: {numberFormat(produtos?.preco)}
+              </Typography>
+              <Typography variant="body2" component="p">
+                Categoria: {produtos.categoria?.tipo}
               </Typography>
               <Typography variant="body2" component="p">
                 Vendido por: {produtos.usuario?.nome}
