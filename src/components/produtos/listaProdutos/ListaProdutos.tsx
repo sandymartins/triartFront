@@ -31,21 +31,7 @@ function ListaProdutos() {
 
     const userId = useSelector<TokenState, TokenState['id']>((state) => state.id);
 
-useEffect(() => {
-  if (token === '') {
-    toast.error('Erro de conexão, realize o Login novamente', {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: false,
-      theme: "colored",
-      progress: undefined, 
-    } ); 
-    navigate('/login');
-  }
-}, [token]);
+
 
 async function getProdutos() {
   await busca("/produtos", setProdutos, {
