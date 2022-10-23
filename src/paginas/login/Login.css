@@ -23,7 +23,6 @@
 .fundo {
     height: 100vh;
     background: #C29159;
-    height: 100vh;
 
 }
 
@@ -89,6 +88,10 @@
     border-color: white;
     border-style: solid;
 
+}
+
+.MuiButton-label {
+background: unset;
 }
 
 @media (max-width: 800px)

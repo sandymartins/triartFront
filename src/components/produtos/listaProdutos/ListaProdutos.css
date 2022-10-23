@@ -56,11 +56,15 @@
   margin-bottom: 25px;
 }
 
-@media screen and (max-width: 850px) {
-  .container-card {
-    width: 30%;
-  }
+.tdn {
+  text-decoration: none;
 }
+
+  @media screen and (max-width: 850px){
+    .container-card {
+      width: 30%;
+    }
+  }
 
 @media screen and (max-width: 450px) {
   .container-card {

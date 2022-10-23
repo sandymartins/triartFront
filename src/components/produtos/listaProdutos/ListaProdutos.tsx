@@ -23,28 +23,15 @@ const useStyles = makeStyles({
 function ListaProdutos() {
 
     let navigate = useNavigate();
-    const [produtos, setProdutos] = useState<Produto[]>([])
+    const [produtos, setProdutos] = useState<any[]>([])
+
     const token = useSelector<TokenState, TokenState['tokens']>(
       (state)=> state.tokens
     ) 
 
     const userId = useSelector<TokenState, TokenState['id']>((state) => state.id);
 
-useEffect(() => {
-  if (token === '') {
-    toast.error('Erro de conexão, realize o Login novamente', {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: false,
-      theme: "colored",
-      progress: undefined, 
-    } ); 
-    navigate('/login');
-  }
-}, [token]);
+
 
 async function getProdutos() {
   await busca("/produtos", setProdutos, {
@@ -98,25 +85,60 @@ return (
                 Ver mais
               </Button>
             </Link>
-            <Box display="flex" justifyContent="center" mt={1.5} mb={1.5}>
+          
 
-              <Link to={`/atualizarProduto/${produtos.id}`} className="text-decorator-none" >
-                <Box mx={1}>
-                  <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                    atualizar
-                  </Button>
-                </Box>
-              </Link> 
+
+
               
-              <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">
-                <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
-                    deletar
-                  </Button>
+           {produtos.usuario?.id === +userId ? (
+              <Box display="flex" justifyContent="center" mb={1.5}>
+                  <Link
+                    to={`/atualizarProduto/${produtos.id}`}
+                    className="tdn"
+                  >
+                    <Box mx={1}>
+                      <Button variant="contained" size="small" color="primary">
+                        atualizar
+                      </Button>
+                    </Box>
+                  </Link>
+                  <Link
+                    to={`/deletarProduto/${produtos.id}`}
+                    className="tdn"
+                  >
+                    <Box mx={1}>
+                      <Button
+                        variant="contained"
+                        size="small"
+                        color="secondary"
+                      >
+                        deletar
+                      </Button>
+                    </Box>
+                  </Link>
                 </Box>
-              </Link>
-             
-            </Box>
+            ) : (
+              <Box display="flex" justifyContent="center" mb={1.5}>
+                  
+                    <Box mx={1}>
+                      <Button variant="contained" size="small" color="primary" disabled>
+                        atualizar
+                      </Button>
+                    </Box>
+                  
+                    <Box mx={1}>
+                      <Button
+                        variant="contained"
+                        size="small"
+                        color="secondary"
+                        disabled
+                      >
+                        deletar
+                      </Button>
+                    </Box>
+                  
+                </Box>
+            )}
 
           </CardActions>
         </Card>
