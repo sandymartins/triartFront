@@ -157,7 +157,7 @@ function back() {
 
   return (
     <main className='bgCadastroProduto'>
-    <Container maxWidth="sm" className='container-form'>
+    <Container className='container-form'>
       <form onSubmit={onSubmit} className='formLetter'>
           <Typography variant="h3" color="textSecondary" component="h1" align="center">Formulário de cadastro de Produtos</Typography>
           <TextField value={produtos.nome} onChange={(event: ChangeEvent<HTMLInputElement>) => updatedProduto(event)} id="nome" label="Nome" variant="outlined" name="nome" margin="normal" fullWidth />
