@@ -1,606 +1,141 @@
 import React from 'react';
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { Grid } from '@material-ui/core';
-import { Box } from '@mui/material';
 import './Contato.css';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      maxWidth: 345,
-    },
-    media: {
-      height: 0,
-      paddingTop: '56.25%', // 16:9
-    },
-    expand: {
-      transform: 'rotate(0deg)',
-      marginLeft: 'auto',
-      transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
-    expandOpen: {
-      transform: 'rotate(180deg)',
-    },
-    avatar: {
-      backgroundColor: red[500],
-    },
-  }),
-);
+
 
 export default function Contato() {
-  const classes = useStyles();
-  const [brend, setBrenda] = React.useState(false);
-  const [flavi, setFlavio] = React.useState(false);
-  const [luc, setLucas] = React.useState(false);
-  const [leon, setLeo] = React.useState(false);
-  const [mate, setMateus] = React.useState(false);
-  const [mir, setMi] = React.useState(false);
-  const [sand, setSan] = React.useState(false);
 
-  const flavio = () => {
-    setFlavio(!flavi);
-  };
+return (
 
-  const brenda = () => {
-    setBrenda(!brend);
-  }
+<main>
 
-  const lucas = () => {
-    setLucas(!luc);
-  }
+<section className='ctt-h1'>
+    <h1 className='ctt-h1'>Equipe TriArt </h1>
+</section>
 
-  const leo = () => {
-    setLeo(!leon);
-  }
+<section className='main-ctt'>
 
-  const mi = () => {
-    setMi(!mir);
-  }
-
-  const mat = () => {
-    setMateus(!mate);
-  }
-
-  const san = () => {
-    setSan(!sand);
-  }
-
-  return (
-    
-    <div className='bgContato'>
-      <div className='bgContato'> 
-      <Grid container direction='row' justifyContent='center'>
-        <Grid alignItems='center' justifyContent='center'>
-
-          <Box component="span" m={5}>
-
-            <Card className={classes.root}>
-              <CardHeader
-                avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar}>
-                    LP
-                  </Avatar>
-                }
-
-                title="Lucas Pereira"
-                subheader="Desenvolvedor FullStack Java"
-              />
-              <CardMedia
-                className={classes.media}
-                image="https://avatars.githubusercontent.com/u/106689837?v=4"
-                title="Lucas"
-              />
-              <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Saiba mais
-                </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                  <a href="https://www.linkedin.com/in/lucascostapereira/"
-                    target="_blank"
-                    color='blue'>
-                    <LinkedInIcon className='color' />
-                  </a>
-                </IconButton>
-
-                <IconButton aria-label="share">
-                  <a href="https://github.com/pereiracaslu/"
-                    target="_blank"
-                    color='blue'>
-                    <GitHubIcon className='color' />
-                  </a>
-                </IconButton>
-                <IconButton
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: luc,
-                  })}
-                  onClick={lucas}
-                  aria-expanded={luc}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </IconButton>
-              </CardActions>
-              <Collapse in={luc} timeout="auto" unmountOnExit>
-                <CardContent>
-                  <Typography paragraph> Hello word!</Typography>
-                  <Typography paragraph>
-
-                  </Typography>
-                  <Typography paragraph>
-                    Tenho 24 anos, ex-militar.
-                  </Typography>
-                  <Typography paragraph>
-                    Apaixonado por adrenalina
-                  </Typography>
-                  <Typography>
-
-                  </Typography>
-                </CardContent>
-              </Collapse>
-            </Card>
-          </Box>
-
-          <Box component="span" m={5} >
-
-            <Card className={classes.root}>
-              <CardHeader
-                avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar}>
-                    MM
-                  </Avatar>
-                }
-
-                title="Mirelle Mota"
-                subheader="Desenvolvedora FullStack Java"
-              />
-              <CardMedia
-                className={classes.media}
-                image="https://avatars.githubusercontent.com/u/104468548?v=4"
-                title="Mirelle"
-              />
-              <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Apresentação
-                </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                  <a href="https://www.linkedin.com/in/mirelle-mota/"
-                    target="_blank">
-                    <LinkedInIcon className='color' />
-                  </a>
-                </IconButton>
-
-                <IconButton aria-label="share">
-                  <a href="https://github.com/MirelleMota"
-                    target="_blank">
-                    <GitHubIcon className='color' />
-                  </a>
-                </IconButton>
-                <IconButton
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: mir,
-                  })}
-                  onClick={mi}
-                  aria-expanded={mir}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </IconButton>
-              </CardActions>
-              <Collapse in={mir} timeout="auto" unmountOnExit>
-                <CardContent>
-                  <Typography paragraph>Method:</Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography>
-                    Apresentação expandida
-                  </Typography>
-                </CardContent>
-              </Collapse>
-            </Card>
-          </Box>
+<div className="container-ctt">
 
 
+  <div className="cards-ctt">
+    <div className="imgBx">
+      <img src="https://i.imgur.com/KPjXKmW.jpg" />
+    </div>
 
+    <div className="content-ctt">
+      <div className="details">
+        <h2>Brenda Chagas<br /><span>Desenvolvedora Full Stack</span></h2>
+        <ul className="social_icons">
+          <li><a href="https://www.linkedin.com/in/brenda-chagas/"><i className="fa fa-linkedin"></i><LinkedInIcon /></a></li>
+          <li><a href="https://github.com/Brehchs"><i className="fa fa-github"></i><GitHubIcon /></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-        </Grid>
-      </Grid>
+  <div className="cards-ctt">
+    <div className="imgBx">
+      <img src="https://i.imgur.com/vUZs8JC.jpg" />
+    </div>
 
-      <Grid container direction='row' justifyContent='center' alignItems='center'>
-        <Grid alignItems='center' xs={12} justifyContent='center'>
+    <div className="content-ctt">
+      <div className="details">
+        <h2>Flavio Messias<br /><span>Desenvolvedor Full Stack</span></h2>
+        <ul className="social_icons">
+          <li><a href="https://www.linkedin.com/in/flaviohmneto/"><i className="fa fa-linkedin"></i><LinkedInIcon /></a></li>
+          <li><a href="https://github.com/FlavioMessias"><i className="fa fa-github"></i><GitHubIcon /></a></li>
+        </ul>
+      </div>
+    </div>
+   </div>
 
-          <Box component="span" m={5}>
-            <Card className={classes.root}>
-              <CardHeader
-                avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar}>
-                    FM
-                  </Avatar>
-                }
-                title="Flavio Messias"
-                subheader="Desenvolvedor FullStack Java"
-              />
-              <CardMedia
-                className={classes.media}
-                image="https://avatars.githubusercontent.com/u/105988892?v=4"
-                title="Flavio"
-              />
-              <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Apresentação
-                </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                  <a href="https://www.linkedin.com/in/flaviohmneto/"
-                    target="_blank"
-                    color='blue'>
-                    <LinkedInIcon className='color' />
-                  </a>
-                </IconButton>
+   <div className="cards-ctt">
+    <div className="imgBx">
+      <img src="https://i.imgur.com/qjMstZa.jpg" />
+    </div>
 
-                <IconButton aria-label="share">
-                  <a href="https://github.com/FlavioMessias/"
-                    target="_blank"
-                    color='blue'>
-                    <GitHubIcon className='color' />
-                  </a>
-                </IconButton>
-                <IconButton
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: flavi,
-                  })}
-                  onClick={flavio}
-                  aria-expanded={flavi}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </IconButton>
-              </CardActions>
-              <Collapse in={flavi} timeout="auto" unmountOnExit>
-                <CardContent>
-                  <Typography paragraph>Method:</Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography>
-                    Apresentação expandida
-                  </Typography>
-                </CardContent>
-              </Collapse>
-            </Card>
+    <div className="content-ctt">
+      <div className="details">
+        <h2>Leonardo Gonçalves<br /><span>Desenvolvedor Full Stack</span></h2>
+        <ul className="social_icons">
+          <li><a href="https://www.linkedin.com/in/leonardo-gonçalves-0020b2246/"><i className="fa fa-linkedin"></i><LinkedInIcon /></a></li>
+          <li><a href="https://github.com/leogs2003"><i className="fa fa-github"></i><GitHubIcon /></a></li>
+        </ul>
+      </div>
+    </div> 
+   </div>
 
-          </Box>
+   <div className="cards-ctt">
+    <div className="imgBx">
+      <img src="https://i.imgur.com/HkGXStQ.jpg" />
+    </div>
 
-          <Box component="span" m={5} >
+    <div className="content-ctt">
+      <div className="details">
+        <h2>Lucas Pereira<br /><span>Desenvolvedor Full Stack</span></h2>
+        <ul className="social_icons">
+          <li><a href="https://www.linkedin.com/in/lucascostapereira/"><i className="fa fa-linkedin"></i><LinkedInIcon /></a></li>
+          <li><a href="https://github.com/pereiracaslu"><i className="fa fa-github"></i><GitHubIcon /></a></li>
+        </ul>
+      </div>
+    </div> 
+   </div>
 
-            <Card className={classes.root}>
-              <CardHeader
-                avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar}>
-                    SM
-                  </Avatar>
-                }
+   <div className="cards-ctt">
+    <div className="imgBx">
+      <img src="https://i.imgur.com/bbgD9eU.jpg" />
+    </div>
 
-                title="Sandy Martins"
-                subheader="Desenvolvedora FullStack Java"
-              />
-              <CardMedia
-                className={classes.media}
-                image="https://i.imgur.com/qkJRYSH.jpg"
-                title="Sandy"
-              />
-              <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Apresentação
-                </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                  <a href="https://www.linkedin.com/in/sandymartinss/"
-                    target="_blank">
-                    <LinkedInIcon className='color' />
-                  </a>
-                </IconButton>
+    <div className="content-ctt">
+      <div className="details">
+        <h2>Mateus Queiroz<br /><span>Desenvolvedor Full Stack</span></h2>
+        <ul className="social_icons">
+          <li><a href="https://www.linkedin.com/in/mateus-queiroz-davidson96/"><i className="fa fa-linkedin"></i><LinkedInIcon /></a></li>
+          <li><a href="https://github.com/MQueirozD"><i className="fa fa-github"></i><GitHubIcon /></a></li>
+        </ul>
+      </div>
+    </div> 
+   </div>
 
-                <IconButton aria-label="share">
-                  <a href="https://github.com/sandymartins/"
-                    target="_blank">
-                    <GitHubIcon className='color' />
-                  </a>
-                </IconButton>
-                <IconButton
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: sand,
-                  })}
-                  onClick={san}
-                  aria-expanded={sand}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </IconButton>
-              </CardActions>
-              <Collapse in={sand} timeout="auto" unmountOnExit>
-                <CardContent>
-                  <Typography paragraph>Method:</Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography>
-                    Apresentação expandida
-                  </Typography>
-                </CardContent>
-              </Collapse>
-            </Card>
-          </Box>
-        </Grid>
-      </Grid>
+   <div className="cards-ctt">
+    <div className="imgBx">
+      <img src="https://i.imgur.com/r3Ef8X4.jpg" />
+    </div>
 
-      <Grid container direction='row' justifyContent='center' alignItems='center'>
-        <Grid alignItems='center' xs={12} justifyContent='center'>
+    <div className="content-ctt">
+      <div className="details">
+        <h2>Mirelle Mota<br /><span>Desenvolvedora Full Stack</span></h2>
+        <ul className="social_icons">
+          <li><a href="https://www.linkedin.com/in/mirelle-mota/"><i className="fa fa-linkedin"></i><LinkedInIcon /></a></li>
+          <li><a href="https://github.com/MirelleMota"><i className="fa fa-github"></i><GitHubIcon /></a></li>
+        </ul>
+      </div>
+    </div> 
+   </div>
 
-          <Box component="span" m={5} >
+   <div className="cards-ctt">
+    <div className="imgBx">
+      <img src="https://i.imgur.com/qkJRYSH.jpg" />
+    </div>
 
-            <Card className={classes.root}>
-              <CardHeader
-                avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar}>
-                    BC
-                  </Avatar>
-                }
+    <div className="content-ctt">
+      <div className="details">
+        <h2>Sandy Martins<br /><span>Desenvolvedora Full Stack</span></h2>
+        <ul className="social_icons">
+          <li><a href="https://www.linkedin.com/in/sandymartinss/"><i className="fa fa-linkedin"></i><LinkedInIcon /></a></li>
+          <li><a href="https://github.com/sandymartins"><i className="fa fa-github"></i><GitHubIcon /></a></li>
+        </ul>
+      </div>
+    </div> 
+   </div>
 
-                title="Brenda Chagas"
-                subheader="Desenvolvedora FullStack Java"
-              />
-              <CardMedia
-                className={classes.media}
-                image="https://avatars.githubusercontent.com/u/106995756?v=4"
-                title="Brenda"
-              />
-              <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                  <a href="https://www.linkedin.com/in/brenda-chagas-667aa3233/"
-                    target="_blank"
-                    color='blue'>
-                    <LinkedInIcon className='color' />
-                  </a>
-                </IconButton>
+  </div>
 
-                <IconButton aria-label="share">
-                  <a href="https://github.com/Brehchs/"
-                    target="_blank"
-                    color='blue'>
-                    <GitHubIcon className='color' />
-                  </a>
-                </IconButton>
-                <IconButton
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: brend,
-                  })}
-                  onClick={brenda}
-                  aria-expanded={brend}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </IconButton>
-              </CardActions>
-              <Collapse in={brend} timeout="auto" unmountOnExit>
-                <CardContent>
-                  <Typography paragraph>Method:</Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography>
-                    Apresentação expandida
-                  </Typography>
-                </CardContent>
-              </Collapse>
-            </Card>
-          </Box>
+</section>
 
-          <Box component="span" m={5} >
-
-            <Card className={classes.root}>
-              <CardHeader
-                avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar}>
-                    MQ
-                  </Avatar>
-                }
-
-                title="Mateus de Queiroz"
-                subheader="Desenvolvedor FullStack Java"
-              />
-              <CardMedia
-                className={classes.media}
-                image="https://avatars.githubusercontent.com/u/84162653?v=4"
-                title="Mateus"
-              />
-              <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Apresentação
-                </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                  <a href="https://www.linkedin.com/in/mateus-queiroz-davidson96/"
-                    target="_blank"
-                    color='blue'>
-                    <LinkedInIcon className='color' />
-                  </a>
-                </IconButton>
-
-                <IconButton aria-label="share">
-                  <a href="https://github.com/MQueirozD/"
-                    target="_blank"
-                    color='blue'>
-                    <GitHubIcon className='color' />
-                  </a>
-                </IconButton>
-                <IconButton
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: mate,
-                  })}
-                  onClick={mat}
-                  aria-expanded={mate}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </IconButton>
-              </CardActions>
-              <Collapse in={mate} timeout="auto" unmountOnExit>
-                <CardContent>
-                  <Typography paragraph>Method:</Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography>
-                    Apresentação expandida
-                  </Typography>
-                </CardContent>
-              </Collapse>
-            </Card>
-          </Box>
-
-        </Grid>
-      </Grid>
-
-      <Grid container direction='row' justifyContent='center' alignItems='center'>
-        <Grid alignItems='center' xs={12} justifyContent='center'>
-
-
-          <Box component="span" m={5} >
-
-            <Card className={classes.root}>
-              <CardHeader
-                avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar}>
-                    LG
-                  </Avatar>
-                }
-
-                title="Leonardo Gonçalves"
-                subheader="Desenvolvedor FullStack Java"
-              />
-              <CardMedia
-                className={classes.media}
-                image="https://avatars.githubusercontent.com/u/78987929?v=4"
-                title="Leo"
-              />
-              <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Apresentação
-                </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                  <a href="https://www.linkedin.com/in/leonardo-gon%C3%A7alves-0020b2246/"
-                    target="_blank"
-                    color='blue'>
-                    <LinkedInIcon className='color' />
-                  </a>
-                </IconButton>
-
-                <IconButton aria-label="share">
-                  <a href="https://github.com/leogs2003/"
-                    target="_blank"
-                    color='blue'>
-                    <GitHubIcon className='color' />
-                  </a>
-                </IconButton>
-                <IconButton
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: leon,
-                  })}
-                  onClick={leo}
-                  aria-expanded={leon}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </IconButton>
-              </CardActions>
-              <Collapse in={leon} timeout="auto" unmountOnExit>
-                <CardContent>
-                  <Typography paragraph>Method:</Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography paragraph>
-                    Apresentação expandida
-                  </Typography>
-                  <Typography>
-                    Apresentação expandida
-                  </Typography>
-                </CardContent>
-              </Collapse>
-            </Card>
-          </Box>
-
-
-        </Grid>
-      </Grid>
-
-          
-      </div>
-      </div>
-           
-    
-  );
+</main>
+);
 }

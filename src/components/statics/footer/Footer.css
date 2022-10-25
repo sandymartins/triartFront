@@ -16,8 +16,8 @@
     border-radius: 50%;
     outline: 3px solid #fff;
     transition-property:
-        outline-offset, outline-color,
-        background-color;
+    outline-offset, outline-color,
+    background-color;
     transition-duration: .25s;
 
      
@@ -39,7 +39,7 @@
     #fdf497 0%, #fdf497 5%,
     #fd5949 45%, #d6249f 60%,
     #285AEB 90%);
-outline-color: #e944ac;
+    outline-color: #e944ac;
 }
 
 .github:hover {

@@ -1,38 +1,139 @@
-.MuiGrid-justify-content-xs-center {
-    justify-content: center;
-    display: flex;
-    margin-top: 1%;
-}
-.color{
-    color: grey;
-}
-.bgContato{
-    background: linear-gradient(62deg, #b47325, #e4dcdf, #c19158, #e8e6e6);
-    animation: gradient 15s ease infinite;
-    @-webkit-keyframes gradient{
-        0% {
-          background-position: 0 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-           background-position: 0% 50%;
-        }
-      }
-      @keyframes gradient{
-        0% {
-          background-position: 0 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-           background-position: 0% 50%;
-        }
-      }
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap');
+
+/* .main-ctt {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+} */
+
+
+.main-ctt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(62deg, #dd8011, #ecd0aff5, #c19158, #e8ab34);
 }
 
-.bgContato .MuiGrid-justify-content-xs-center{
-margin-top: 0% !important;
+.ctt-h1{
+  font-size: 2em;
+  background-color: white;
+  font-family: cursive;
+  color: #c19158;
 }
+
+.container-ctt {
+  position: sticky;
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container-ctt .cards-ctt {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(#c19158, #c19158 30%, #1d3548 30%, #1d3548);
+  margin: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container-ctt .cards-ctt .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 100000;
+  border-radius: 20px;
+  overflow: hidden;
+  transform-origin: top;
+}
+
+.container-ctt .cards-ctt:hover .imgBx {
+  transform: translateY(30px) scale(0.5);
+}
+
+.container-ctt .cards-ctt .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-ctt .cards-ctt .content-ctt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+
+.container-ctt .cards-ctt:hover .content-ctt {
+  transform: translateY(0);
+}
+
+.container-ctt .cards-ctt .content-ctt .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container-ctt .cards-ctt .content-ctt .details h2 {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.container-ctt .cards-ctt .content-ctt .details h2 span {
+  font-size: 0.8en;
+  font-weight: 400;
+  color: #c19158;
+}
+
+.social_icons {
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+}
+
+.social_icons li {
+  list-style: none;
+  margin: 4px;
+}
+
+.social_icons li a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #294d69;
+  border-radius: 50%;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.social_icons li a:hover {
+  transform: rotate(360deg);
+  background: #c19158;
+}
+
+
