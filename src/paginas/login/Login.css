@@ -14,7 +14,7 @@
     min-height: 80vh;
     background-size: cover;
     background-position: center;
-    width: 90vh;
+    min-width: 71vh;
     height: 347px;
     left: 376px;
     top: 242px;
@@ -94,7 +94,7 @@
 background: unset;
 }
 
-@media (max-width: 800px)
+@media (max-width: 1405px)
 {
   .imagemLogo
    {

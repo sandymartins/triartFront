@@ -122,8 +122,8 @@ function Cadastrar() {
         </Grid>
 
         <Grid item xs={6} alignItems="center" justifyContent="center" >
-          <Box padding={10}>
-            <form onSubmit={conectar} className='fundo22' >
+          <Box padding={10} className='fundo22'>
+            <form onSubmit={conectar}  >
               <Typography variant="h2" className="escolha">Cadastre-se</Typography>
               <TextField  className="escolha"
                 onChange={(event: ChangeEvent<HTMLInputElement>) => updateModel(event)}

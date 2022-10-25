@@ -134,7 +134,7 @@ function Login() {
                 value={userLogin.usuario}
                 id="usuario"
                 name="usuario"
-                label="Usuário"
+                label="Usuário (E-mail)"
                 variant="outlined"
                 fullWidth
                 margin="normal"
