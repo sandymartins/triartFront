@@ -1,9 +1,4 @@
-@import url(//db.onlinewebfonts.com/c/e662339992c4abf5b43f537391bd3169?family=Candara);
-@import url('http://fonts.cdnfonts.com/css/bernadette-3');/* FONTE ESTRANHA */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
-
 .nav .css-1q39md6-MuiButtonBase-root-MuiButton-root{
-  /* font-family: 'Oswald', sans-serif !important; */
   font-family: 'Carrois Gothic SC', sans-serif !important;
   color: #fff !important;
   border: 4px solid !important;
