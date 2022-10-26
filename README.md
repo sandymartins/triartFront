@@ -16,6 +16,8 @@ TriArt é um -ecommerce feito para artesãos de baixa renda conseguirem ter uma 
 Nosso programa pode ser acessado através do link https://triart.netlify.app/ 
  
 🛠️ Construído com:
+ <br>
+ 
 Back-End:
 -Java
 -MySQL
