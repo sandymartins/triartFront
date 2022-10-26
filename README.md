@@ -6,7 +6,7 @@
 <img src="https://i.imgur.com/iXVsjci.png";>
 <div/>
 
-O presente projeto foi desenvolvido como parte da conclusão do bloco I do bootcamp da [Generation](https://brazil.generation.org/ ).
+O presente projeto foi desenvolvido como parte da conclusão da [Generation](https://brazil.generation.org/ ).
 
 O programa tem o objetivo de ajudar o artesão a ter mais visibilidade em seus produtos e a gratuidade do nosso sistema.
 
