@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+<div align="center">                                                       
+🎨  PROJETO TRIBO ARTESÃO  🎨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div/>
+<div align="center">
+<img src="https://i.imgur.com/iXVsjci.png";>
+<div/>
 
-## Available Scripts
+O presente projeto foi desenvolvido como parte da conclusão do bloco I do bootcamp da [Generation](https://brazil.generation.org/ ).
 
-In the project directory, you can run:
+O programa tem o objetivo de ajudar o artesão a ter mais visibilidade em seus produtos e a gratuidade do nosso sistema.
 
-### `npm start`
+TriArt é um -ecommerce feito para artesãos de baixa renda conseguirem ter uma melhor divulgação seus trabalhos e também contamos com ajudas comunitárias artísticas, como cursos e locais com entrada franca. Faz parte do projeto final das turmas Full stack Java, do Bootcamp da ONG Generation (McKinsey & Co.). Criado pelo grupo 05 da turma 57.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+📋 Pré-requisitos: 
+Nosso programa pode ser acessado através do link https://triart.netlify.app/ 
+ 
+🛠️ Construído com:
+Back-End:
+-Java
+-MySQL
+-Spring
+-Insomnia
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Front-End:
+-CSS 
+-HTML
+-React
+-TypeScript
 
-### `npm test`
+<div align="center">
+<img src="https://i.imgur.com/HHQ6176.png" width="500px";>
+<div/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Linguagem:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### ![APM](https://camo.githubusercontent.com/771cc18a712bf9edb0925a86164c34b0d803c4d9177dd4467eff7b777109c723/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6176612d4544384230303f7374796c653d666f722d7468652d6261646765266c6f676f3d6a617661266c6f676f436f6c6f723d7768697465)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 💻  Contribuidores: 
 
-### `npm run eject`
+ <a href="https://github.com/sandymartins">`Sandy Martins`<br><img src="https://avatars.githubusercontent.com/u/52469840?v=4" style="zoom:20%;" /></a> | <a href="https://github.com/Brehchs">`Brenda Chagas`<br><img src="https://avatars.githubusercontent.com/u/106995756?v=4" style="zoom:20%;" /></a> | <a href="https://github.com/MirelleMota">`Mirelle Mota`<br><img src="https://avatars.githubusercontent.com/u/104468548?v=4" style="zoom: 20%;" /></a> |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <a href="https://github.com/FlavioMessias">`Flavio Messias`<br><img src="https://avatars.githubusercontent.com/u/105988892?v=4" style="zoom:20%;" /></a> | <a href="https://github.com/pereiracaslu">`Lucas Pereira`<br><img src="https://avatars.githubusercontent.com/u/106689837?v=4" style="zoom:20%;" /></a> | <a href="https://github.com/leogs2003">`Leonardo Gonçalves`<br><img src="https://avatars.githubusercontent.com/u/78987929?v=4" style="zoom:20%;" /></a> | 
+<br> <a href="https://github.com/MQueirozD">`Mateus Queiroz`<br><img src="https://avatars.githubusercontent.com/u/84162653?v=4" style="zoom:20%;" /></a> 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
